@@ -1,0 +1,1 @@
+{"py/object": "data_classes.Big_Container", "containers": {"Containers": [{"py/object": "data_classes.Small_Container", "data1": "some data"}, {"py/object": "data_classes.Small_Container", "data1": "Some other data"}], "Other Containers": [{"py/object": "data_classes.Small_Container", "data1": {"py/tuple": []}}]}}

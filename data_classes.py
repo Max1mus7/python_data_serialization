@@ -1,3 +1,4 @@
+from collections import namedtuple
 import sys, os, json
 
 from json import JSONEncoder
@@ -11,6 +12,8 @@ sys.path.append(os.path.join(__file__))
 class MyEncoder(JSONEncoder):
     def default(self, obj):
         return json.dumps(obj.__dict__)
+
+
 
 class Small_Container:
     def __init__(self, data1: str = "some data") -> None:
@@ -35,3 +38,7 @@ class Big_Container:
 
     def __str__(self):
         return json.dumps(self.__dict__, default = lambda o: o.__dict__, indent=4)
+    
+    
+def customStudentDecoder(studentDict):
+    return namedtuple('X', studentDict.keys())(*studentDict.values())

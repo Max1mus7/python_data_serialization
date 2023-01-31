@@ -8,7 +8,8 @@ def main():
     print(c)
     for container_name in c.containers :
         print(container_name)
-        print(c.containers[container_name])
+        for item in c.containers[container_name]:
+            print(item)
         # print(mc_val)
 
 if __name__ == '__main__':

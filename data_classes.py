@@ -24,18 +24,6 @@ class Small_Container:
     def __str__(self):
         return json.dumps(self.__dict__)
 
-class Identifier:
-    def __init__(self,name: str = "name"):
-        self.name = name
-
-    def __iter__(self):
-        yield from {
-            "name": self.name
-        }
-
-    def __str__(self):
-        return json.dumps(self.__dict__)
-
 class Big_Container:
     def __init__(self, containers: Dict[str, List[Small_Container]] = {"Containers": [Small_Container(), Small_Container("Some other data")], "Other Containers": [Small_Container(())]}) -> None:
         self.containers = containers
